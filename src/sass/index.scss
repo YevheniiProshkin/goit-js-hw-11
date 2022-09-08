@@ -1,2 +1,99 @@
-@import './common';
-@import './example';
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', 'Montserrat', sans-serif;
+  background-color: #eaeff3;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  background: linear-gradient(to top, rgb(238, 255, 0), rgb(0, 162, 255));
+  text-align: center;
+}
+
+.search-form {
+  position: relative;
+  display: inline-block;
+}
+
+.search-form input {
+  padding: 15px 70px 15px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 53px;
+  background-image: url(../images/icon-JS-HW-11.svg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 130px;
+  text-align: center;
+
+  @media screen and (min-width: 390px) {
+    width: 390px;
+  }
+  @media screen and (min-width: calc(390px * 2)) {
+    width: calc(390px * 2);
+  }
+  @media screen and (min-width: calc(390px * 3)) {
+    width: calc(390px * 3);
+  }
+  @media screen and (min-width: calc(390px * 4)) {
+    width: calc(390px * 4);
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 0 auto;
+}
+
+.photo-card {
+  width: 360px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.photo-card img {
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.photo-card .info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.photo-card .info-item {
+  margin: 5px 0;
+}
+
+.info b {
+  display: block;
+  font-weight: 600;
+  color: rgb(31, 31, 96);
+}
